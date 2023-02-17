@@ -11,8 +11,12 @@ int main(void)
 	for (start = 0; start < 10; start++)
 	{
 		putchar(start + '0');
-		putchar(',');
-		putchar(' ');
+
+		if (start <= 8)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
