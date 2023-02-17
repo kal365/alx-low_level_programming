@@ -6,28 +6,30 @@
  */
 int main(void)
 {
-	int num1;
+	int num1 = 0;
 
 	int num2;
 
-	for (num1 = 0; num1 < 10; num1++)
+	while (num1 <= 9)
 	{
-		for (num2 = 1; num2 > 10; num2++)
+		num2 = 0;
+	
+		while (num2 <= 9)
 		{
-			if (num1 == num2)
+			if (num1 != num2 && num1 < num2)
 			{
-				continue;
-			}
-			else
-			{
-
 				putchar(num1 + '0');
 				putchar(num2 + '0');
-				putchar(',');
-				putchar(' ');
+			
+				if (num1 + num2 != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			num2++;
+			++num2;
 		}
+		++num1;
 	}
 	putchar('\n');
 	return (0);
