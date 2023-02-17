@@ -26,7 +26,7 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
-			num2--;
+			num2++;
 		}
 	}
 	putchar('\n');
