@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - A function that will output from a - z ten times in a newline
+ * print_alphabet_x10 - output from a - z ten times
  *
  * Return: void
  */
