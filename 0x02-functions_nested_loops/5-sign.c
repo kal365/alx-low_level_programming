@@ -7,8 +7,6 @@
  */
 int print_sign(int n)
 {
-	char str;
-
 	if (n == 0)
 	{
 		_putchar('0');
