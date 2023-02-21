@@ -6,7 +6,9 @@
  */
 void print_times_table(int n)
 {
-	int start, result, count;
+	int start, result, count, large1, large2;
+
+	int three1, three2;
 
 	if ((n < 15) && (n > 0))
 	{
@@ -36,11 +38,6 @@ void print_times_table(int n)
 				{
 					_putchar(',');
 					_putchar(' ');
-					if ((count <= 9) && (start <= 9))
-					{
-						_putchar(' ');
-						_putchar(' ');
-					}
 				}
 			}
 			_putchar('\n');
