@@ -1,63 +1,58 @@
 #include "main.h"
+/**
+ * print_times_table - print table
+ * @n: integer
+ * Return: void
+ */
 void print_times_table(int n)
 {
-	int start, time, num1, num2;
+	int start, result, count, large1, large2;
 
-	start = 0;
+	int three1, three2;
 
-	if (n > 15 || n < 0)
+	if ((n < 15) && (n > 0))
 	{
-	
-	}
-	else
-	{
-		while (start <= n)
+		for (start = 0; start <= n; start++)
 		{
-			time = 0;
-
-			while (time <= n)
+			_putchar('0');
+			_putchar(',');
+			_putchar(' ');
+			for (count = 1; count <= n; count++)
 			{
-				if (n <= 9)
+				result = count * start;
+
+				if (result <= 9)
+					_putchar(result + '0');
+				else if (result <= 99)
 				{
-					if (time == n)
-					{
-						_putchar(time + '0');
-						break;
-					}
-					else
-					{
-						_putchar(time + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
+					large1 = result / 10;
+					large2 = result % 10;
+
+					_putchar(large1 + '0');
+					_putchar(large2 + '0');
 				}
-				time++;
-				if (n > 9)
+				else if (result > 99)
 				{
-					if (time < 10)
-					{
-						_putchar(time + '0');
-					}
-					else
-					{
-						num1 = time / 10;
-					
-						num2 = time % 10;
-					
-						_putchar(num1 + '0');
-						_putchar(num2 + '0');
-					}
-					if (time != n)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
-					else
-						break;
+					large1 = result / 10;
+
+					three1 = large1 / 10;
+					three2 = large1 % 10;
+
+					large2 = result % 10;
+
+					_putchar(three1 + '0');
+					_putchar(three2 + '0');
+					_putchar(large2 + '0');
+				}
+				if (count != n)
+				{
+					_putchar(',');
+					_putchar(' ');
 				}
 			}
 			_putchar('\n');
-			start++;
+		}
 	}
 }
-}
+
+
