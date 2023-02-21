@@ -1,39 +1,63 @@
 #include "main.h"
-/**
- * print_times_table - time table
- * @n: integer
- * Return: void
- */
 void print_times_table(int n)
 {
-	int start, count, mult;
+	int start, time, num1, num2;
 
-	if (n >= 0 && n <=15)
+	start = 0;
+
+	if (n > 15 || n < 0)
 	{
-		for (start = 0; start < n; n++)
+	
+	}
+	else
+	{
+		while (start <= n)
 		{
-			for (count = 0; count < n; count++)
+			time = 0;
+
+			while (time <= n)
 			{
-				_putchar(',');
-				_putchar(' ');
-
-				mult = start * count;
-
-				if (mult <= 9)
-					_putchar(' ');
-				if (mult <= 99)
-					_putchar(' ');
-
-				if (mult >= 100)
+				if (n <= 9)
 				{
-					_putchar((mult / 100) + '0');
-					_putchar((mult / 10) % 10 + '0');
+					if (time == n)
+					{
+						_putchar(time + '0');
+						break;
+					}
+					else
+					{
+						_putchar(time + '0');
+						_putchar(',');
+						_putchar(' ');
+					}
 				}
-				else if (mult <= 99 && mult >= 10)
-					_putchar((mult / 10) + '0');
-				_putchar((mult % 10) + '0');
+				time++;
+				if (n > 9)
+				{
+					if (time < 10)
+					{
+						_putchar(time + '0');
+					}
+					else
+					{
+						num1 = time / 10;
+					
+						num2 = time % 10;
+					
+						_putchar(num1 + '0');
+						_putchar(num2 + '0');
+					}
+					if (time != n)
+					{
+						_putchar(',');
+						_putchar(' ');
+					}
+					else
+						break;
+				}
 			}
 			_putchar('\n');
-		}
+			start++;
 	}
+}
 }
