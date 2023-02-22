@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int start, follow1, sum, follow2, add;
+	int start, follow1, sum, follow2;
 
 	start = 0;
 
