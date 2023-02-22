@@ -8,7 +8,7 @@ int main(void)
 {
 	int start;
 
-	long long int follow1, sum, follow2;
+	long int follow1, sum, follow2;
 
 	start = 0;
 
@@ -32,9 +32,9 @@ int main(void)
 			start++;
 		}
 		if (start == 50)
-			printf("%llu", sum);
+			printf("%lu", sum);
 		else
-			printf("%llu, ", sum);
+			printf("%lu, ", sum);
 		sum = follow1 + follow2;
 		follow2 = follow1;
 		follow1 = sum;
