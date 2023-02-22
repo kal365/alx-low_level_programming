@@ -31,7 +31,7 @@ int main(void)
 			follow1 = sum;
 			start++;
 		}
-		if (start == 50)
+		if (start == 98)
 			printf("%lu", sum);
 		else
 			printf("%lu, ", sum);
