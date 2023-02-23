@@ -10,20 +10,22 @@ void print_square(int size)
 
 	start = 0;
 
-	if (size == 0)
+	if (size <= 0)
 	{
-		_putchar('\n');
 		_putchar('\n');
 	}
-	while (start < size)
+	else
 	{
-		hash = 0;
-		while (hash < size)
+		while (start < size)
 		{
-			_putchar('#');
-			hash++;
+			hash = 0;
+			while (hash < size)
+			{
+				_putchar('#');
+				hash++;
+			}
+			_putchar('\n');
+			start++;
 		}
-		_putchar('\n');
-		start++;
 	}
 }
