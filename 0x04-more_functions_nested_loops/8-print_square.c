@@ -10,6 +10,10 @@ void print_square(int size)
 
 	start = 0;
 
+	if (size == 0)
+	{
+		_putchar('\n');
+	}
 	while (start < size)
 	{
 		hash = 0;
