@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * print_square - to print square with hash
+ * @size: integer
  * Return: 0 on success
  */
 void print_square(int size)
