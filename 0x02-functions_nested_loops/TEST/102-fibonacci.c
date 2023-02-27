@@ -7,9 +7,10 @@ int main(void)
 
 	j = 1;
 
-	for (i = 1; i < 50; i++)
+	for (i = 2; i < 100; i++)
 	{
-		printf("%i, ", sum);
+		if (i != 49)
+			printf("%i, ", sum);
 		i = j;
 		j = sum;
 		sum = i + j;
