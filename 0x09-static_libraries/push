@@ -1,0 +1,7 @@
+#!/bin/bash
+
+// To push with minimal way
+read -p "Enter a commit message" MESSAGE
+git add .
+git commit -m "$MESSAGE"
+git push
